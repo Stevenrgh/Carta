@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para Ti 💌</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #fff0f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    #letter {
+      white-space: pre-wrap;
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Hola, Ingresa tu nombre 😊</h2>
+  <input type="text" id="nameInput" placeholder="Escribe tu nombre aquí" />
+  <button onclick="checkName()">Entrar</button>
+
+  <div id="letter" style="display:none;"></div>
+
+  <script>
+    function checkName() {
+      const validNames = [
+        "Tairii", "Tai", "tairii", "tairi", "Tairi Lu", "tairii lu", "Tairii lu", "Tairii Lu"
+      ];
+      const input = document.getElementById("nameInput").value.toLowerCase();
+      if (validNames.includes(input)) {
+        showLetter();
+      } else {
+        alert("Nombre incorrecto 😅 intenta de nuevo, porfi.");
+      }
+    }
+
+    function showLetter() {
+      const message = `Mientras hago esto, me siento como Rick en Revindicadores, cuando dice que deben poner lo más importante.
+
+Pero... solo quería decirte cosas que no me atrevo a decirte por chat, no sé por qué, bueno en realidad sí, pero no importa.
+
+Solo quiero que sepas que te amo mucho, buaah mi amor, si tuvieras cómo Steven habla de ti a sus amigos...
+
+De cómo le brillan los ojos al ver que tú estás feliz, esos pequeños gestos de alegría que él puede notar en ti a veces
+hacen que todo valga la pena. Pero... no estoy aquí por eso. Estoy aquí para hablar sobre algo que me tiene un poco loco.
+
+Porque tú me contaste tus problemas...
+Y yo no quiero que tengas uno más conmigo, pero la verdad es que... yo también estoy mal.
+
+Así como tú sobrepiensas por un like en una publicación que Steven hizo pensando en ti...
+Steven también siente celos, y sobrepiensa mucho, y ahora mismo está bien pinche celoso de un man al que ni conoce.
+
+Porque, stalkeando tu perfil vi que seguías a un bj.shd, y revisando las putas historias del men
+encontré un comentario tuyo que decía MAGIA NEGRA. Y como le dije a mis amigos, no quiero decírtelo,
+porque esto suena muy celoso por nada, y no quiero que me tomes como pinche inseguro, porque no soy esa mierda.
+
+La cosa es que me dijeron que debía hacerlo, que cuando ellos también se sienten así, lo suelen hablar con su pareja.
+Y me aconsejaron que lo hiciera.
+
+Pero buaah, eso es todo. Me siento mejor escribiendo en VSCode.
+
+De todas formas quiero que me hagas una promesa: Si en algún momento te aburres de tu servidor Steven, me lo vas a decir.
+Porque aunque suene cliché que se vayan a la mierda, yo quiero que tú seas feliz. Tú me has contado partes de tu vida. Y tú mereces ser feliz.
+
+Así no sea conmigo. Y si quieres estar con alguien que sí tengas cerca, que te haga feliz todos los días, solo dímelo.
+Yo lo tomaré de la mejor forma. Bueno, eso era todo.
+
+Estar Contigo:
+    felicidad = infinita
+
+Te doy Gracias por existir, por inspirarme, por ser tú. 💻❤️
+
+Con Amor y celos,
+Steven`;
+
+      document.getElementById("letter").innerText = message;
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
+</body>
+</html>
