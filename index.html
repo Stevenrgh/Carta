@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carta para ti 💌</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para Ti 💌</title>
   <style>
     body {
-      margin: 0;
-      padding: 2rem;
-      font-family: "Segoe UI", sans-serif;
-      background: #fff0f5;
+      font-family: 'Courier New', monospace;
+      background-color: #fff0f5;
       color: #333;
-      line-height: 1.6;
-      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
     }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
+    #letter {
+      white-space: pre-wrap;
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 12px;
+      max-width: 700px;
     }
-
-    h1 {
-      text-align: center;
-      color: #c71585;
-    }
-
-    p {
-      text-align: justify;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      font-style: italic;
-      color: #666;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-      .container {
-        padding: 1.2rem;
-      }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Para ti 💖</h1>
-    <p>
-      [Mientras hago esto, me siento como Rick en Revindicadores, cuando dice que deben poner lo más importante.
+  <h2>Hola, Ingresa tu nombre 😊</h2>
+  <input type="text" id="nameInput" placeholder="Escribe tu nombre aquí" />
+  <button onclick="checkName()">Entrar</button>
+
+  <div id="letter" style="display:none;"></div>
+
+  <script>
+    function checkName() {
+      const validNames = [
+        "Tairii", "Tai", "tairii", "tairi", "Tairi Lu", "tairii lu", "Tairii lu", "Tairii Lu"
+      ];
+      const input = document.getElementById("nameInput").value.toLowerCase();
+      if (validNames.includes(input)) {
+        showLetter();
+      } else {
+        alert("Nombre incorrecto 😅 intenta de nuevo, porfi.");
+      }
+    }
+
+    function showLetter() {
+      const message = `Mientras hago esto, me siento como Rick en Revindicadores, cuando dice que deben poner lo más importante.
 
 Pero... solo quería decirte cosas que no me atrevo a decirte por chat, no sé por qué, bueno en realidad sí, pero no importa.
 
@@ -91,11 +90,17 @@ Estar Contigo:
 Te doy Gracias por existir, por inspirarme, por ser tú. 💻❤️
 
 Con Amor y celos,
-Steven]
-    </p>
-    <footer>
-      Con cariño, Steven ✍️
-    </footer>
-  </div>
+Steven`;
+
+      document.getElementById("letter").innerText = message;
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
 </body>
 </html>
