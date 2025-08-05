@@ -1,21 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow-y: auto; /* Esto activa el scroll vertical si el contenido es largo */
-  background-color: #fffafc;
-}
-
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  min-height: 100vh; /* Asegura que ocupe toda la altura */
-  box-sizing: border-box;
-}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -30,10 +12,10 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
       padding: 20px;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
     }
     #letter {
       white-space: pre-wrap;
@@ -43,6 +25,8 @@ body {
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       max-width: 700px;
+      max-height: 60vh; /* Altura máxima visible */
+      overflow-y: auto;  /* Scroll solo si es necesario */
     }
     input, button {
       padding: 10px;
@@ -99,7 +83,7 @@ Pero buaah, eso es todo. Me siento mejor escribiendo en VSCode.
 De todas formas quiero que me hagas una promesa: Si en algún momento te aburres de tu servidor Steven, me lo vas a decir.
 Porque aunque suene cliché que se vayan a la mierda, yo quiero que tú seas feliz. Tú me has contado partes de tu vida. Y tú mereces ser feliz.
 
-Así no sea conmigo Y aunque eso me dule. Y si quieres estar con alguien que sí tengas cerca, que te haga feliz todos los días, solo dímelo.
+Así no sea conmigo Y aunque eso me duela. Y si quieres estar con alguien que sí tengas cerca, que te haga feliz todos los días, solo dímelo.
 Yo lo tomaré de la mejor forma. Bueno, eso era todo.
 
 Estar Contigo:
@@ -117,9 +101,4 @@ Steven`;
 </body>
 </html>
 
-      document.getElementById("letter").style.display = "block";
-    }
-  </script>
-</body>
 
-</html>
